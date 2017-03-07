@@ -9,6 +9,8 @@ public class KafkaConsumer implements MessageListener<String, String>{
 		//String topic = record.topic();
 		//String v = record.value();
 		//long offset = record.offset();
-		System.out.println("收到消息-->" + record.toString());
-	}
+//		System.out.println("收到消息-->" + record.toString());
+        System.out.println(Thread.currentThread().getId() + " " + Thread.currentThread().getName());
+        System.out.println(record.value());
+    }
 }

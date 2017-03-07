@@ -21,8 +21,9 @@ public class KafkaController {
     @RequestMapping(value = "/test")
     public @ResponseBody Object index() {
         for (int i = 0; i < 1000; i++) {
-            logger.info("======send=====" + i);
-            kafkaTemplate.send("test", "key", "测试");
+//            logger.info("======send=====" + i);
+//            kafkaTemplate.send("test", "key", "测试" + i);
+            kafkaTemplate.send("test", "liyazhou--" + i);
         }
         return "finished";
     }
